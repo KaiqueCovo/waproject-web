@@ -15,7 +15,7 @@ Utilize o VSCode, já está configurado com sugestão de extensões.
 
 
 ##### :warning: Este projeto necessita de uma API
-- [waproject-api](git@github.com:KaiqueCovo/waproject-api.git)
+- [waproject-api](https://github.com/KaiqueCovo/waproject-api)
 
 ```bash
 # Clone o repositório

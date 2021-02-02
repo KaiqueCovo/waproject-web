@@ -65,16 +65,19 @@ const ListItem = memo((props: IProps) => {
     ];
   }, [handleDelete, handleEdit]);
 
+  const price = useMemo(() => {
+    return (+order.price).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
+  }, [order.price]);
+
   if (deleted) {
     return null;
   }
 
-  console.log(+order.price);
   return (
     <TableRow>
       <TableCell>{order.name}</TableCell>
       <TableCell>{order.description}</TableCell>
-      <TableCell>{order.price}</TableCell>
+      <TableCell>{price}</TableCell>
       <TableCell>{order.amount}</TableCell>
       <TableCellActions options={options} loading={loading} error={error} onDismissError={handleDismissError} />
     </TableRow>

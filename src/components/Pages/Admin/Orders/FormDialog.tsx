@@ -51,6 +51,8 @@ const FormDialog = memo((props: IProps) => {
   const formik = useFormikObservable<IOrder>({
     validationSchema,
     onSubmit(model) {
+      model.price = +model.price;
+
       return orderService.save(model).pipe(
         tap(order => {
           console.log(model);

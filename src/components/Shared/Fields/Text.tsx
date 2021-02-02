@@ -24,6 +24,10 @@ const TextField = memo<IProps>(({ formik, mask, value, name, loading, onChange, 
         return;
       }
 
+      if (e.currentTarget.type === 'number') {
+        return formik.setFieldValue(name, parseInt(e.currentTarget.value));
+      }
+
       formik.setFieldTouched(name, true, false);
       formik.setFieldValue(name, maskClean(e.currentTarget.value), true);
     },

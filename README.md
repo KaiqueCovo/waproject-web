@@ -13,13 +13,21 @@ Utilize o VSCode, já está configurado com sugestão de extensões.
 
 ### Iniciando um novo projeto
 
+
+##### :warning: Este projeto necessita de uma API
+- [waproject-api](git@github.com:KaiqueCovo/waproject-api.git)
+
 ```bash
-git clone [repo]
-yarn install # ou npm install
+# Clone o repositório
+$ git clone git@github.com:KaiqueCovo/waproject-web.git
 
-node ./init.js
+# Instalando dependências
+$ yarn install
+# Caso você prefira o NPM
+$ npm install
 
-yarn start # Não utilizar o docker
+# Inicio o projeto
+yarn start
 ```
 
 ### Para mais informações veja a pasta ./docs
